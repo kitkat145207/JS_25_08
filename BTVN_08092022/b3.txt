@@ -1,0 +1,12 @@
+const personObject = {
+    fullName: function(){
+        return this.firstName+' '+this.lastName 
+    }
+};
+const duong = Object.create(personObject);
+const dao = Object.create(personObject);
+personObject.sayBye = function(){
+  console.log('goodbye');
+}
+duong.sayBye();
+dao.sayBye();
