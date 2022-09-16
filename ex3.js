@@ -1,3 +1,6 @@
+/*Tìm các cặp phần tử có tổng bằng 1 số cho trước
+VD: [1,7,9,2,5,3,8]; sum = 10   => [1,9] ; [7,3]; [2,8]
+*/
 let twoSum = (array, sum) => {
     let hashMap = {},
         results = []
@@ -11,3 +14,4 @@ let twoSum = (array, sum) => {
     return results;
 }
 console.log(twoSum([1, 7, 9, 2, 5, 3, 8], 10));
+// [ [ 1, 9 ], [ 7, 3 ], [ 2, 8 ] ]
