@@ -1,22 +1,12 @@
-    function findLargestSumPair(arr) {
-        let first, second;
-        if (arr[0] > arr[1]) {
-            first = arr[0];
-            second = arr[1];
-        } else {
-            first = arr[1];
-            second = arr[0];
-        }
-        for (let i = 2; i < arr.length; i++) {
-            if (arr[i] > first) {
-                second = first;
-                first = arr[i];
-            } else if (arr[i] > second &&
-                arr[i] != first)
-                second = arr[i];
-        }
-        return (first + second);
-    }
+ // Tìm 2 phần tử có tổng lớn nhất trong 1 mảng
+ // VD: [1,7,9,2,5,3,8] => [9,8]
 
-    let arr1 = [100, 11, 1, 6, 4];
-    document.write("Max Pair Sum is " + findLargestSumPair(arr1));
+ const arr = [1, 7, 9, 2, 5, 3, 8];
+
+ const sortArr = arr.sort((a, b) => a - b);
+
+ const theTwoMax = [sortArr[sortArr.length - 2], sortArr[sortArr.length - 1]];
+
+ console.log(theTwoMax)
+
+ // [ 8, 9 ]
